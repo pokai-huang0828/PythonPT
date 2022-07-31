@@ -7,7 +7,7 @@ def calDays(startDate, targetDate):
 
 
 while True:
-    event = input("請輸入計算的事件(輸入 exit 離開): ")
+    event = input("請輸入計算的事件(輸入 'exit' 離開): ")
     if event == "exit" or event == "Exit" or event == "EXIT":
         print("Good Bye~! :) 👋👋👋")
         break
@@ -15,7 +15,7 @@ while True:
     eveDate = input("請輸入事件目標日期(yyyy-mm-dd): ").split("-")
     eventDate = date(int(eveDate[0]), int(eveDate[1]), int(eveDate[2]))
 
-    checkPoint = input("事件開始日期為今日嗎? (Y/N)")
+    checkPoint = input("事件開始日期為今日嗎? (Y/N) ")
     if checkPoint == "Y" or checkPoint == "y":
         startDate = date.today()
     else:
@@ -24,7 +24,10 @@ while True:
 
     if startDate < eventDate:
         result = calDays(startDate, eventDate)
-        print(f"距離{event}, 西元{eveDate[0]}年, {eveDate[1]}月{eveDate[2]}日還有 {result} 天!!\n")
+        print(f"距離\"{event}\" 西元{eveDate[0]}年, {eveDate[1]}月{eveDate[2]}日還有 {result} 天!!\n")
+
+    elif startDate == eventDate:
+        print(f"今天就是 {event} !!")
 
     else:
         result = calDays(eventDate, startDate)
