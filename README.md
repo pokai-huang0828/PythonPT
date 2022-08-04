@@ -1,4 +1,5 @@
 # PythonPT
+[Relit learning](https://replit.com/@PoKaiHuang)
 
 ###  [1. Type of Data，input，math，String](https://colab.research.google.com/drive/1L1rmni0BsjDtkZcRSpoXKJJxxv9MtVYF?usp=sharing)
 ###  [2. Raw String，F - String，Dict，if...else，Range，while](https://colab.research.google.com/drive/1BjIARwAvbfhjGEyDrEzsuHcAaGJ1s9zr?usp=sharing)
