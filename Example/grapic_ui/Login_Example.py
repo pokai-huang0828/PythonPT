@@ -34,19 +34,24 @@ def showImg(acct):
 
 win = Tk()
 win.title("Login")
+win.geometry("370x250")
 
-Label(win, text=" User Name: ").grid(row=0)
-Label(win, text=" Password : ").grid(row=1)
+img1 = PhotoImage(file="img/Python.png")
+
+Label(win, image=img1).grid(row=0, column=0, columnspan=3)
+
+Label(win, text=" User Name: ").grid(row=1)
+Label(win, text=" Password : ").grid(row=2)
 
 entryID = Entry(win, width=20)
 entryPW = Entry(win, width=20, show="*")
-entryID.grid(row=0, column=1)
-entryPW.grid(row=1, column=1)
+entryID.grid(row=1, column=1)
+entryPW.grid(row=2, column=1)
 
 btnLogin = Button(win, text="Login", width=10, command=login)
-btnLogin.grid(row=2, column=0, pady=10, padx=5)
+btnLogin.grid(row=3, column=0, pady=10, padx=5)
 
 btnExit = Button(win, text="Exit", width=10, command=win.destroy)
-btnExit.grid(row=2, column=1, pady=10, padx=5)
+btnExit.grid(row=3, column=1, pady=10, padx=5)
 
 win.mainloop()
