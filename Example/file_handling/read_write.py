@@ -26,7 +26,7 @@ poem = '''
 
 
 try:
-    with open("output2.txt", "a") as f:  # a: 寫入模式開啟，內容附加在原檔案內容之後
+    with open("exFiles/output2.txt", "a") as f:  # a: 寫入模式開啟，內容附加在原檔案內容之後
         f.write(poem)
     print("資料填寫至: output2.txt")
 except Exception as e:

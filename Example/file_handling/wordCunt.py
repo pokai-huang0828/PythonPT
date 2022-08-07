@@ -8,7 +8,7 @@ import yaml
 punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
 try:
-    with open("song.txt") as f:
+    with open("exFiles/song.txt") as f:
         newSong = f.read()
 
     word_dict = {}

@@ -2,7 +2,7 @@
 import locale
 import io
 print("CP950")
-f = open("Poem.txt", encoding='cp950')
+f = open("exFiles/Poem.txt", encoding='cp950')
 line = f.readline()
 
 while line:
@@ -10,7 +10,7 @@ while line:
     line = f.readline()
 
 print("UTF-8")
-f2 = open("PoemUTF8.txt", encoding='utf-8')
+f2 = open("exFiles/PoemUTF8.txt", encoding='utf-8')
 line = f2.readline()
 
 while line:

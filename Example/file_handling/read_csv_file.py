@@ -1,7 +1,7 @@
 import csv
 
-file = open('data.csv')  # With header
-file2 = open('data2.csv')  # Without header
+file = open('exFiles/data.csv')  # With header
+file2 = open('exFiles/data2.csv')  # Without header
 
 csvCursor = csv.reader(file)
 csvCursor2 = csv.reader(file2)

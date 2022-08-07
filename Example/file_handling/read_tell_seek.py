@@ -1,4 +1,4 @@
-f = open("song1.txt", "r")
+f = open("exFiles/song1.txt", "r")
 str = f.read(15)
 print("讀取的字串是 : ", str)
 
