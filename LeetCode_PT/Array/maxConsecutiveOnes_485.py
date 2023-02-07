@@ -41,3 +41,8 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
 test_array = [1,1,0,1,1,1]
 print(findMaxConsecutiveOnes(test_array))
 
+'''
+    The time complexity of the above algorithm is O(n) where n is the number of elements in the input array. Because we are iterating through the input array only once.
+    
+    The space complexity of the above algorithm is O(1). Because we are not using any extra space.
+'''
