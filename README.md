@@ -1,8 +1,11 @@
 # PythonPT
 
+1. [Variables](#1-variables)
+2. [If-Statements](#2-if-statements)
+
 ## Basic
 
-### 1. Variables (變數)
+### 1. Variables
 
 In programming, a variable is a named location in memory where data can be stored and retrieved. Variables in Python are used to store values, such as numbers, strings, and lists, that can be used and manipulated in your code.
 
