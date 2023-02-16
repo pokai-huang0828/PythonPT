@@ -12,6 +12,7 @@
 8. [Queues](#8-queues)
    1. [Basic queue implementation](#basic-queue-implementation)
    2. [Advance queue implementation](#advanced-queue-implementation)
+9. [HashSets](#9-hashsets)
 
 ## Basic
 
@@ -522,6 +523,58 @@ print(my_queue.queue)  # Output: [('B', 2), ('A', 3)]
 ```
 
 In this example, the priority queue is implemented as a queue of tuples. The first element of the tuple is the item to be stored in the queue, and the second element is its priority. The get_priority() function takes an element as input and returns its priority. The PriorityQueue class uses the key function to store the elements in the queue in order of priority.
+
+### 9. HashSets
+
+A hash set is a data structure that stores a collection of unique elements in no particular order and allows for constant-time insertion, deletion, and lookup of elements. The set data type in Python is implemented using a hash table, which allows for constant-time operations.
+Basic Usage
+Here's an example of using a set to implement a basic hash set:
+
+```py
+my_set = set()
+my_set.add(1)
+my_set.add(2)
+my_set.add(3)
+print(my_set)  # Output: {1, 2, 3}
+my_set.remove(2)
+print(my_set)  # Output: {1, 3}
+```
+
+In this example, we create a new set, add some elements to it using add(), and remove an element using remove().
+Advanced Usage
+Frozenset
+A frozenset is an immutable set that can be used as a key in a dictionary or as an element of another set. It is helpful in situations where you need to store a set of sets or where you need to use a set as a key in a dictionary.
+
+```py
+my_set = frozenset([1, 2, 3])
+my_dict = {my_set: 'value'}
+print(my_dict)  # Output: {frozenset({1, 2, 3}): 'value'}
+```
+
+In this example, we create a new frozenset from a regular set and use it as a key in a dictionary.
+Set Comprehension
+Set comprehension creates a new set from an iterable, using a compact and readable syntax. It is similar to list comprehension but produces a set instead of a list.
+
+```py
+my_list = [1, 2, 3, 4, 5]
+my_set = {x for x in my_list if x % 2 == 0}
+print(my_set)  # Output: {2, 4}
+```
+
+In this example, we use set comprehension to create a new set that contains only the even numbers from a list.
+Set Operations
+Sets support several operations, including union, intersection, difference, and symmetric difference. Here's an example:
+
+```py
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+print(set1.union(set2))           # Output: {1, 2, 3, 4, 5, 6, 7, 8}
+print(set1.intersection(set2))    # Output: {4, 5}
+print(set1.difference(set2))      # Output: {1, 2, 3}
+print(set1.symmetric_difference(set2))  # Output: {1, 2, 3, 6, 7, 8}
+```
+
+In this example, we create two sets and perform various set operations on them, including union, intersection, difference, and symmetric difference.
 
 ## LeetCode practice
 
