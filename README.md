@@ -1,7 +1,17 @@
 # PythonPT
 
+0. [Startup](/LeetCode_PT/Basic/Startup.py)
 1. [Variables](#1-variables)
 2. [If-Statements](#2-if-statements)
+3. [Loops](#3-loops)
+4. [Math](#4-math)
+5. [Arrays](#5-arrays)
+6. [Sorting](#6-sorting)
+   1. [Advance sorting with modules](#advanced-sorting-with-modules)
+7. [Strings](#7-strings)
+8. [Queues](#8-queues)
+   1. [Basic queue implementation](#basic-queue-implementation)
+   2. [Advance queue implementation](#advanced-queue-implementation)
 
 ## Basic
 
@@ -371,6 +381,147 @@ print(my_list)  # Output: [1, 2, 4, 4, 4, 5, 7]
 The insort_left() function inserts the new element into the list at the index returned by bisect_left(), maintaining the sort order.
 
 Overall, Python provides various functions and modules for sorting data collections, from basic built-in functions to more advanced modules like heapq and bisect.
+
+### 7. Strings
+
+In Python, a string is a sequence of characters enclosed in quotes. Strings can be created using single quotes (') or double quotes ("). 
+Here are some examples:
+
+```py
+my_string = 'Hello, World!'
+my_other_string = "This is a string."
+```
+
+Strings are a fundamental data type in Python and are used to represent textual data. 
+Here are some basic operations you can perform on strings:
+
+```py
+# Concatenation
+my_string = 'Hello, ' + 'World!'
+print(my_string)  # Output: 'Hello, World!'
+
+# Repetition
+my_string = 'Hello' * 3
+print(my_string)  # Output: 'HelloHelloHello'
+
+# Indexing
+my_string = 'Hello, World!'
+print(my_string[0])  # Output: 'H'
+print(my_string[-1])  # Output: '!'
+
+# Slicing
+my_string = 'Hello, World!'
+print(my_string[0:5])  # Output: 'Hello'
+print(my_string[7:])  # Output: 'World!'
+```
+
+We can also use several built-in functions to manipulate strings, such as len() to get the length of a string, split() to split a string into a list of substrings, and join() to join a list of substrings into a string.
+Here are some examples:
+
+```py
+# Length
+my_string = 'Hello, World!'
+print(len(my_string))  # Output: 13
+
+# Split
+my_string = 'Hello, World!'
+my_list = my_string.split(',')
+print(my_list)  # Output: ['Hello', ' World!']
+
+# Join
+my_list = ['Hello', 'World', '!']
+my_string = '-'.join(my_list)
+print(my_string)  # Output: 'Hello-World-!'
+```
+
+Python also provides several advanced features for working with strings, such as regular expressions, which are patterns used to match and manipulate strings. The re module provides functions for working with regular expressions:
+
+```py
+import re
+
+# Find all occurrences of 'cat' or 'dog' in the string
+my_string = 'The cat and the dog slept.'
+matches = re.findall(r'cat|dog', my_string)
+print(matches)  # Output: ['cat', 'dog']
+```
+
+In Python, strings are a fundamental data type, and they provide a powerful and flexible way to work with textual data.
+
+### 8. Queues
+
+A queue is a data structure that stores a collection of elements and allows us to add elements to the back of the queue and remove elements from the front. Several built-in and third-party modules can be used in Python to implement queues.
+
+#### Basic Queue Implementation
+
+##### Using List
+
+One way to implement a queue in Python is to use a list. You can add elements to the back of the list using the append() method and remove elements from the front of the list using the pop() method:
+
+```py
+my_queue = []
+my_queue.append(1)
+my_queue.append(2)
+my_queue.append(3)
+print(my_queue)  # Output: [1, 2, 3]
+my_queue.pop(0)
+print(my_queue)  # Output: [2, 3]
+```
+
+However, this implementation could be more efficient because removing elements from the front of the list requires shifting all the remaining elements to the left.
+Using Deque
+A more efficient way to implement a queue in Python is to use the deque class from the collections module. Deque is short for "double-ended queue," and it provides methods for adding elements to both the front and back of the queue, as well as removing elements from both the front and back of the queue:
+
+```py
+from collections import deque
+
+my_queue = deque()
+my_queue.append(1)
+my_queue.append(2)
+my_queue.append(3)
+print(my_queue)  # Output: deque([1, 2, 3])
+my_queue.popleft()
+print(my_queue)  # Output: deque([2, 3])
+```
+
+#### Advanced Queue Implementation
+
+##### Using Queue Module
+
+Python also provides a built-in queue module that provides classes for implementing queues. The queue module provides several classes, including Queue, LifoQueue, and PriorityQueue. The queue is a class for implementing a basic first-in, first-out (FIFO) queue:
+
+```py
+import queue
+
+my_queue = queue.Queue()
+my_queue.put(1)
+my_queue.put(2)
+my_queue.put(3)
+print(my_queue.queue)  # Output: [1, 2, 3]
+my_queue.get()
+print(my_queue.queue)  # Output: [2, 3]
+```
+
+The put() method adds an element to the back of the queue, and the get() method removes an element from the front.
+Using Priority Queue
+The PriorityQueue class is a class for implementing a priority queue, where elements are stored in the queue in order of priority. Elements with higher priority are dequeued first. To use a priority queue, you need to define a key function that takes an element as input and returns its priority. 
+Here's an example:
+
+```py
+import queue
+
+def get_priority(item):
+    return item[1]
+
+my_queue = queue.PriorityQueue()
+my_queue.put(('A', 3))
+my_queue.put(('B', 2))
+my_queue.put(('C', 1))
+print(my_queue.queue)  # Output: [('C', 1), ('B', 2), ('A', 3)]
+my_queue.get()
+print(my_queue.queue)  # Output: [('B', 2), ('A', 3)]
+```
+
+In this example, the priority queue is implemented as a queue of tuples. The first element of the tuple is the item to be stored in the queue, and the second element is its priority. The get_priority() function takes an element as input and returns its priority. The PriorityQueue class uses the key function to store the elements in the queue in order of priority.
 
 ## LeetCode practice
 
