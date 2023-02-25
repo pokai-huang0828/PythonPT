@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
-        "columnspan"
+        "columnspan",
+        "padx",
+        "pady",
+        "yscrollcommand"
     ]
 }

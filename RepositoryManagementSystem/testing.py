@@ -1,6 +1,7 @@
 import datetime
 import sqlite3
 import tkinter as tk
+from tkinter import ttk
 
 # 建立數據庫連接
 conn = sqlite3.connect('RepositoryManagementSystem/inventory.db')
@@ -146,26 +147,36 @@ result_text = tk.Text(root)
 # 建立商品瀏覽列表
 products_label = tk.Label(root, text='All Products')
 products_list = tk.Listbox(root)
-products_list.bind('<<ListboxSelect>>', products_list_select) # 綁定事件處理函數
+
+# 綁定事件處理函數
+products_list.bind('<<ListboxSelect>>', products_list_select)
 
 # 排版元件
-product_id_label.grid(row=0, column=0, sticky=tk.W+tk.E, padx=10, pady=10)
-product_id_entry.grid(row=0, column=1, columnspan=3, sticky=tk.W+tk.E, padx=10, pady=10)
-name_label.grid(row=1, column=0, padx=10, pady=10)
-name_entry.grid(row=1, column=1, columnspan=3, sticky=tk.W+tk.E, padx=10, pady=10)
-product_location_label.grid(row=2, column=0, padx=10, pady=10)
-product_location_entry.grid(row=2, column=1, columnspan=3, sticky=tk.W+tk.E, padx=10, pady=10)
-direction_label.grid(row=3, column=0, padx=10, pady=10)
-in_radio.grid(row=3, column=1, padx=10, pady=10)
-out_radio.grid(row=3, column=2, padx=10, pady=10)
-quantity_label.grid(row=4, column=0, padx=10, pady=10)
-quantity_entry.grid(row=4, column=1, columnspan=3, sticky=tk.W+tk.E, padx=10, pady=10)
+product_id_label.grid(row=0, column=0, sticky=tk.W, padx=10, pady=10)
+product_id_entry.grid(row=0, column=1, sticky=tk.W+tk.E, padx=10, pady=10)
+
+name_label.grid(row=1, column=0, sticky=tk.W, padx=10, pady=10)
+name_entry.grid(row=1, column=1, sticky=tk.W+tk.E, padx=10, pady=10)
+
+product_location_label.grid(row=2, column=0, sticky=tk.W, padx=10, pady=10)
+product_location_entry.grid(row=2, column=1, sticky=tk.W+tk.E, padx=10, pady=10)
+
+direction_label.grid(row=3, column=0, sticky=tk.W, padx=10, pady=10)
+in_radio.grid(row=3, column=1, sticky=tk.W, padx=10, pady=10)
+out_radio.grid(row=3, column=2, sticky=tk.W, padx=10, pady=10)
+
+quantity_label.grid(row=4, column=0, sticky=tk.W, padx=10, pady=10)
+quantity_entry.grid(row=4, column=1, sticky=tk.W+tk.E, padx=10, pady=10)
+
 update_button.grid(row=5, column=0, padx=10, pady=10, sticky=tk.W+tk.E)
 add_button.grid(row=5, column=1, padx=10, pady=10, sticky=tk.W+tk.E)
 search_button.grid(row=5, column=2, padx=10, pady=10, sticky=tk.W+tk.E)
-result_text.grid(row=6, column=0, columnspan=3, padx=10, pady=10)
-products_label.grid(row=7, column=0, columnspan=3, padx=10, pady=10)
-products_list.grid(row=8, column=0, columnspan=3, sticky='nsew', padx=10, pady=10)
+
+result_text.grid(row=6, column=0, columnspan=3, padx=10, pady=10, sticky=tk.N+tk.S+tk.W+tk.E)
+
+products_label.grid(row=7, column=0, padx=10, pady=10, sticky=tk.W)
+products_list.grid(row=8, column=0, columnspan=3, padx=10, pady=10, sticky=tk.N+tk.S+tk.W+tk.E)
+
 
 # 設定商品列表的垂直滾動條
 scrollbar = tk.Scrollbar(products_list, orient='vertical', command=products_list.yview)
