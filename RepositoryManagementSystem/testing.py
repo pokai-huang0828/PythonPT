@@ -3,7 +3,7 @@ import sqlite3
 import tkinter as tk
 
 # 建立數據庫連接
-conn = sqlite3.connect('inventory.db')
+conn = sqlite3.connect('RepositoryManagementSystem/inventory.db')
 
 # 建立商品資料表
 conn.execute('''CREATE TABLE IF NOT EXISTS products
