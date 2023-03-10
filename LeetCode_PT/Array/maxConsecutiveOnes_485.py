@@ -8,6 +8,7 @@
     Input: nums = [1,1,0,1,1,1]
     Output: 3
     Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+    
     Example 2:
 
     Input: nums = [1,0,1,1,0,1]
@@ -19,6 +20,8 @@
     1 <= nums.length <= 105
     nums[i] is either 0 or 1.
 '''
+import unittest
+
 def findMaxConsecutiveOnes(nums: list[int]) -> int:
     # Initialize variables to store the maximum consecutive ones found so far and the current count of consecutive ones
     maxCon, count = 0, 0
@@ -39,10 +42,20 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
 
 # Test the function with an example list
 test_array = [1,1,0,1,1,1]
-print(findMaxConsecutiveOnes(test_array))
+print("For test_array = [1, 1, 0, 1, 1, 1], the result is: " + str(findMaxConsecutiveOnes(test_array)))
 
 '''
     The time complexity of the above algorithm is O(n) where n is the number of elements in the input array. Because we are iterating through the input array only once.
     
     The space complexity of the above algorithm is O(1). Because we are not using any extra space.
 '''
+
+# Test the function with the example lists
+class TestFindMaxConsecutiveOnes(unittest.TestCase):
+    def test_findMaxConsecutiveOnes(self):
+        self.assertEqual(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]), 3)
+        self.assertEqual(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1]), 2)
+        self.assertEqual(findMaxConsecutiveOnes([0, 0, 0, 0, 0, 0]), 0)
+        
+if __name__ == '__main__':
+    unittest.main(argv=['first-arg-is-ignored'], exit=False, verbosity=2)
