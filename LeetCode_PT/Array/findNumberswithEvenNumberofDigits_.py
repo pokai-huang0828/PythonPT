@@ -36,3 +36,43 @@
         Divide the number by 10 again and again to get the number of digits.
 '''
 
+import unittest
+
+def findNumberswitchEvenNumberofDigits(nums: list[int]) -> int:
+    # Initialize a variable to store the count of numbers with even number of digits
+    count = 0
+    # Iterate through the list of numbers
+    for i in range(len(nums)):
+        # Initialize a variable to store the number of digits in the current number
+        num_digits = 0
+        # While the current number is greater than 0
+        while nums[i] > 0:
+            # Increment the number of digits in the current number
+            num_digits += 1
+            # Divide the current number by 10
+            nums[i] //= 10
+        # If the number of digits in the current number is even
+        if num_digits % 2 == 0:
+            # Increment the count of numbers with even number of digits
+            count += 1
+    # Return the count of numbers with even number of digits
+    return count
+    
+# Test the function with an example list
+test_array = [12,345,2,6,7896]
+print("For test_array = [12, 345, 2, 6, 7896], the result is: " + str(findNumberswitchEvenNumberofDigits(test_array)))
+
+'''
+    The time complexity of the above algorithm is O(n) where n is the number of elements in the input array. Because we are iterating through the input array only once.
+    
+    The space complexity of the above algorithm is O(1). Because we are not using any extra space.
+'''
+
+class TestCase(unittest.TestCase):
+    def test_findNumberswitchEvenNumberofDigits(self):
+        self.assertEqual(findNumberswitchEvenNumberofDigits([12, 345, 2, 6, 7896]), 2)
+        self.assertEqual(findNumberswitchEvenNumberofDigits([555, 901, 482, 1771]), 1)
+        self.assertEqual(findNumberswitchEvenNumberofDigits([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 5)
+        
+if __name__ == '__main__':
+    unittest.main(argv=['first-arg-is-ignored'], exit=False, verbosity=2)
