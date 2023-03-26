@@ -26,7 +26,7 @@ def clear():
 
 
 def showImg(acct):
-    img1 = PhotoImage(file="img/Python.png")
+    img1 = PhotoImage(file="Images/Python.png")
     label1 = Label(win, image=img1)
     label1.pack()
     win.mainloop()
@@ -36,7 +36,7 @@ win = Tk()
 win.title("Login")
 win.geometry("370x250")
 
-img1 = PhotoImage(file="img/Python.png")
+img1 = PhotoImage(file="Images/Python.png")
 
 Label(win, image=img1).grid(row=0, column=0, columnspan=3)
 

@@ -50,12 +50,10 @@ button3 = tkinter.Button(root,
                          bd=3,  # 按鈕邊框寬度
                          font=("Arial", 18))  # 文字字型
 button3.pack()
-img4 = tkinter.PhotoImage(file='img/Python.png')
-button4 = tkinter.Button(root,
-                         image=img4)
-# ,state = tkinter.DISABLED		    # 按鈕顯示圖片
-# 按鈕設為禁用狀態
-button4.pack()
+
+#img4 = tkinter.PhotoImage(file='Images/Python.png')
+#button4 = tkinter.Button(root, image=img4)
+#button4.pack()
 
 label2.pack()
 
