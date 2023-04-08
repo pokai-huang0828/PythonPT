@@ -14,6 +14,22 @@
    2. [Advance queue implementation](#advanced-queue-implementation)
 9. [HashSets](#9-hashsets)
 
+## LeetCode practice
+
+ 1. Array
+    1. [Max Consecutive Ones](/LeetCode_PT/Array/maxConsecutiveOnes_485.py)
+    2. [Find Numbers with Even Number of Digits](/LeetCode_PT/Array/findNumberswithEvenNumberofDigits_.py)
+    3. [Squares of a Sorted Array](/LeetCode_PT/Array/squaresofSortedArray_977.py) 
+
+
+## Other Learning Notes
+1. [Relit learning](https://replit.com/@PoKaiHuang)
+1. [Type of Data，input，math，String](/Example/CoLab/py01.ipynb)
+2. [Raw String，F - String，Dict，if...else，Range，while](/Example/CoLab/py02.ipynb)
+3. [函式宣告，變數範圍Scope，Lambda 運算式](/Example/CoLab/py03.ipynb)
+4. [import package](https://github.com/pokai-huang0828/PythonPT/tree/main/Example/import_package)
+
+
 ## Basic
 
 ### 1. Variables
@@ -575,15 +591,3 @@ print(set1.symmetric_difference(set2))  # Output: {1, 2, 3, 6, 7, 8}
 ```
 
 In this example, we create two sets and perform various set operations on them, including union, intersection, difference, and symmetric difference.
-
-## LeetCode practice
-
- 1. Array
-
-## [Relit learning](https://replit.com/@PoKaiHuang)
-
-1. [Type of Data，input，math，String](https://colab.research.google.com/drive/1L1rmni0BsjDtkZcRSpoXKJJxxv9MtVYF?usp=sharing)
-2. [Raw String，F - String，Dict，if...else，Range，while](https://colab.research.google.com/drive/1BjIARwAvbfhjGEyDrEzsuHcAaGJ1s9zr?usp=sharing)
-3. [函式宣告，變數範圍Scope，Lambda 運算式](https://colab.research.google.com/drive/1qqO56TXBki-bxEjsjD6j9ld2FpAjpqcs)
-4. [import package](https://github.com/pokai-huang0828/PythonPT/tree/main/Example/import_package)
-5. [import os module](https://github.com/pokai-huang0828/PythonPT/tree/main/Example/useful_os_module)
