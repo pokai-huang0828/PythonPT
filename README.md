@@ -20,6 +20,7 @@
     1. [Max Consecutive Ones](/LeetCode_PT/Array/maxConsecutiveOnes_485.py)
     2. [Find Numbers with Even Number of Digits](/LeetCode_PT/Array/findNumberswithEvenNumberofDigits_.py)
     3. [Squares of a Sorted Array](/LeetCode_PT/Array/squaresofSortedArray_977.py) 
+    4. [Duplicate Zero](/LeetCode_PT/Array/duplicateZeros_1089.py)
 
 
 ## Other Learning Notes
