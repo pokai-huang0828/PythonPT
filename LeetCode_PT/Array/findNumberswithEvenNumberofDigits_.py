@@ -41,23 +41,23 @@ import unittest
 def findNumberswitchEvenNumberofDigits(nums: list[int]) -> int:
     # Initialize a variable to store the count of numbers with even number of digits
     count = 0
-    # Iterate through the list of numbers
+    # 為了不要再for迴圈內在做一個for迴圈，所以用while迴圈來計算每個數字的位數
     for i in range(len(nums)):
         # Initialize a variable to store the number of digits in the current number
         num_digits = 0
-        # While the current number is greater than 0
+        # 用while迴圈來計算每個數字的位數，會將每個數字除以10，直到數字小於0
         while nums[i] > 0:
             # Increment the number of digits in the current number
             num_digits += 1
             # Divide the current number by 10
             nums[i] //= 10
-        # If the number of digits in the current number is even
+        # 如果除完的數字的位數最終是偶數，count就加1
         if num_digits % 2 == 0:
             # Increment the count of numbers with even number of digits
             count += 1
     # Return the count of numbers with even number of digits
     return count
-    
+
 # Test the function with an example list
 test_array = [12,345,2,6,7896]
 print("For test_array = [12, 345, 2, 6, 7896], the result is: " + str(findNumberswitchEvenNumberofDigits(test_array)))
